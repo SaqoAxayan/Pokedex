@@ -1,0 +1,95 @@
+$primary-color: #397f84;
+$secondary-color: #f2f2f2;
+$font-family: "YourChosenFont", sans-serif;
+$box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 9px;
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $box-shadow;
+  padding: 15px 0;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  .infoUrl {
+    width: 90%;
+    height: 70%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+    border-radius: 15px;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: 480px) {
+       width: 80%;
+       height: 60%;
+    }
+  }
+
+  .pokemonName,
+  .pokemonId,
+  .pokemonTypes {
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  .pokemonName {
+    margin-top: 5%;
+    font-size: 25px;
+    font-family: $font-family;
+  }
+
+  .pokemonId {
+    font-size: 24px;
+    color: gray;
+  }
+
+  .pokemonTypes {
+    font-family: $font-family;
+    font-size: 20px;
+    color: $primary-color;
+    line-height: 20px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .pokemonName {
+      font-size: 20px;
+    }
+    .pokemonId {
+      font-size: 18px;
+    }
+    .pokemonTypes {
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+  @media screen and (max-width: 890px) {
+    .pokemonId {
+      font-family: 18px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .pokemonName {
+      font-size: 17px;
+    }
+    .pokemonId {
+      font-size: 15px;
+    }
+    .pokemonTypes {
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+}
